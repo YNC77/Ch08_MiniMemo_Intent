@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Ch08_MiniMemo_Intent</string>
+    <string name="btnSetting">Setting</string>
+    <string name="txvWelcome">Welcome</string>
+    <string name="txvDate">DATE :</string>
+    <string name="txvTime">TIME :</string>
+    <string name="txvDateS">Please click to set Date</string>
+    <string name="txvTimeS">Please click to set Time</string>
+</resources>

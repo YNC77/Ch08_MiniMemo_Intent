@@ -12,12 +12,14 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".Main2Activity" />
-        <activity android:name=".Main3Activity"></activity>
+        <activity android:name=".Main3Activity" android:parentActivityName=".MainActivity">
+            <!-- The Android system now automatically adds the Up button in the app bar -->
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            </activity>
     </application>
 
 </manifest>

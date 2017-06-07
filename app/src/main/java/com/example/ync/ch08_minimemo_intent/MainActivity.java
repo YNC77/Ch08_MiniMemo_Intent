@@ -15,6 +15,9 @@ public class MainActivity extends AppCompatActivity {
     ListView lv;
     ArrayAdapter<String> aa ; // aMemo和ListView的橋樑
 
+    String aTime;
+    String aDate;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
             memoIt = new Intent(MainActivity.this, Main3Activity.class); //connect memoIt and Main3Activity
             memoIt.putExtra("Number", position+1);
             memoIt.putExtra("tittle", aMemo[position]);
+            memoIt.putExtra("date", aDate);
+            memoIt.putExtra("time", aTime);
             startActivityForResult(memoIt, position); // 啟動,有回傳資料, 2nd parameter is RequestCode
         }
     };
@@ -50,10 +55,14 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
+
     protected void onActivityResult(int requestCode, int resultCode, Intent it){
         if(resultCode == RESULT_OK){
             aMemo[requestCode] = it.getStringExtra("tittle");
             aa.notifyDataSetChanged();
+            aDate = it.getStringExtra("date");
+            aTime = it.getStringExtra("time");
+
         }
     }
 

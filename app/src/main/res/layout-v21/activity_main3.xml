@@ -6,8 +6,17 @@
     android:layout_height="match_parent"
     tools:context="com.example.ync.ch08_minimemo_intent.Main3Activity">
 
+    <TextView
+        android:id="@+id/txvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/edtContent"
+        app:layout_constraintRight_toLeftOf="@+id/btnSetting" />
+
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnSetting"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:elevation="0dp"
@@ -76,14 +85,11 @@
         android:layout_marginEnd="16dp" />
 
     <TextView
-        android:id="@+id/txvDT"
+        android:id="@+id/txvDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/edtContent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/btnSetting"
         app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>

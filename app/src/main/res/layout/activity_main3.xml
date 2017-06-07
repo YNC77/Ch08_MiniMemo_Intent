@@ -10,8 +10,6 @@
         android:id="@+id/btnSetting"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:elevation="0dp"
-        android:onClick="setClick"
         android:text="@string/btnSetting"
         android:textAllCaps="false"
         app:layout_constraintBottom_toTopOf="@+id/edtContent"
@@ -77,14 +75,21 @@
         android:layout_marginEnd="16dp" />
 
     <TextView
-        android:id="@+id/txvDT"
+        android:id="@+id/txvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintRight_toLeftOf="@+id/btnSetting"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txvTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginTop="8dp"
-        android:text=">>"
         app:layout_constraintBottom_toTopOf="@+id/edtContent"
-        app:layout_constraintRight_toLeftOf="@+id/btnSetting"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintRight_toLeftOf="@+id/btnSetting" />
 </android.support.constraint.ConstraintLayout>
